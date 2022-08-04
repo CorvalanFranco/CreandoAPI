@@ -1,0 +1,17 @@
+[
+    {
+        "firstName" : "Jose",
+        "phone" : "33333333",
+        "addres" : "avenida siempreviva 777"
+    },
+    {
+        "firstName" : "Chaki",
+        "phone" : "7777777",
+        "addres" : "avenida siempreviva 777"
+    },
+    {
+        "firstName" : "Eve",
+        "phone" : "12345678",
+        "addres" : "avenida siempreviva 777"
+    }
+]
