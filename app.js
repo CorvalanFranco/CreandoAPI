@@ -9,8 +9,6 @@ const mongoURL = "mongodb+srv://usuario_be:1234@creandoback.mwxekie.mongodb.net/
 
 mongoose.connect(mongoURL, {useNewUrlParser: true, useUnifiedTopology: true})
 
-/*metodos: app.use, app.post*/
-
 app.use(express.json({lmit: "50mb"}))
 
 app.post("/api/clients", (req, res) => {
@@ -30,7 +28,7 @@ app.post("/api/clients", (req, res) => {
             res.status(200).send(records)
         }
     })
-    //res.send("You have posted something")
+
 })
 
 app.delete("/api/clients", (req, res)=>{
@@ -39,7 +37,7 @@ app.delete("/api/clients", (req, res)=>{
     })
 })
 
-/*home page donde sale la app*/
+
 app.get("/api/clients", (req, res) => {
     jugando.find({}, (err, docs) =>{
         if (err) {
@@ -50,8 +48,6 @@ app.get("/api/clients", (req, res) => {
     })
 })
 
-
-/*port = puerto de salida, segundo parametro una callback funtion*/
 app.listen(port, () => {
     console.log('Server is listening at http://localhost:' + port)
 })
