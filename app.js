@@ -33,9 +33,21 @@ app.post("/api/clients", (req, res) => {
     //res.send("You have posted something")
 })
 
+app.delete("/api/clients", (req, res)=>{
+    jugando.deleteMany({}, (err) =>{
+        res.status(500).send(err)
+    })
+})
+
 /*home page donde sale la app*/
-app.get("/", (req, res) => {
-    res.send("Hello word")
+app.get("/api/clients", (req, res) => {
+    jugando.find({}, (err, docs) =>{
+        if (err) {
+            res.status(500).send(err)
+        }else{
+            res.status(200).send(docs)
+        }
+    })
 })
 
 
